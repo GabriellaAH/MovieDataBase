@@ -1,3 +1,17 @@
+# Router version
+
+## round 2
+
+### Changes:
+  - Add react-router-dom
+  - refactor the code
+  - removed unnecessarily states and props
+
+The main difference between this and the master version is props and state. The idea behind the master version was to store everything in the same place (MovieMain -> state) and pass to the component as a property.
+This version reducate this unnecessary inheritance.
+What is the benefit of this concept? When we mutate the state, don't need to re-render everything only those components what did change.
+
+
 This project like to demonstrate how can we write a code with different levels.
 starting from the "just work" and later add more practical functions.
 

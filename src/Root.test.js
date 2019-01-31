@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import MovieMain from './MovieMain';
+import Root from './Root';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<MovieMain />, div);
+  ReactDOM.render(<Root />, div);
   ReactDOM.unmountComponentAtNode(div);
 });

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './MoviePanel.css';
-import MoviePanelSubDetail from './MoviePanelSubDetail';
+import MoviePanelSubDetail from './StateLess/MoviePanelSubDetail';
 import C from './data/DbConst';
+import { FavMoviesUpdate, IsAFaveMovie } from './data/LocalDatas';
 
 class MoviePanel extends Component {
 
@@ -12,7 +13,8 @@ class MoviePanel extends Component {
       style: {display: 'none'},
       btnText: 'Show Details',
       show: 0,
-      movieDetail: {}
+      movieDetail: {},
+      imAFavMovie: IsAFaveMovie(this.props.movie.id)
     })
     this.onDetailsClk = this.onDetailsClk.bind(this);
     this.onFavClk = this.onFavClk.bind(this);
@@ -41,8 +43,10 @@ class MoviePanel extends Component {
       overview: this.props.movie.overview,
       poster_path: this.props.movie.poster_path
     }
-
-    this.props.onFavClk(favObj)
+    FavMoviesUpdate(favObj);
+    this.setState({
+      imAFavMovie: IsAFaveMovie(this.props.movie.id)
+    })
   }
 
   getMovieDetails(id) {
@@ -87,9 +91,9 @@ class MoviePanel extends Component {
               </div>
               <div>
                 <button type="button"
-                        className={ (this.props.fav === 1) ? "btn btn-success btn-sm btn-mrgn" : "btn btn-outline-success btn-sm btn-mrgn"}
+                        className={ (this.state.imAFavMovie ) ? "btn btn-success btn-sm btn-mrgn" : "btn btn-outline-success btn-sm btn-mrgn"}
                         onClick={this.onFavClk}>
-                  { (this.props.fav === 1) ? 'Remove from ' : 'Add to '} Favourite
+                  { (this.state.imAFavMovie ) ? 'Remove from ' : 'Add to '} Favourite
                 </button>
               </div>
             </div>

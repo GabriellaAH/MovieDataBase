@@ -4,8 +4,6 @@ import MoviePanel from './MoviePanel';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<MoviePanel movie={
-    {title:'test'}
-  }/>, div);
+  ReactDOM.render(<MoviePanel />, div);
   ReactDOM.unmountComponentAtNode(div);
 });

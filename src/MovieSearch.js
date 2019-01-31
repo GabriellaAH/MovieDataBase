@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import GetMovies from './GetMovies';
-import SearchResult from './SearchResult';
+import SearchResult from './StateLess/SearchResult';
 import './MovieSearch.css';
 import C from './data/DbConst';
 
@@ -14,7 +14,6 @@ class MovieSearch extends Component {
     }
 
     this.onSrcClk = this.onScrClk.bind(this);
-    this.onFavClk = this.onFavClk.bind(this);
     this.runSearch = this.runSearch.bind(this);
   }
 
@@ -45,10 +44,6 @@ onScrClk(srcQry) {
   }
 }
 
-onFavClk(clkId) {
-  this.props.onFavClk(clkId);
-}
-
   render() {
     return (
       <div className="container-fluid">
@@ -58,8 +53,7 @@ onFavClk(clkId) {
                                                    ( (this.state.movies.total_results > 0) ? (<p className="resultCnt">Result: { this.state.movies.total_results } </p>) : null ) }
         <SearchResult
           movies= {this.state.movies}
-          favmovies= {this.props.favMovies}
-          onFavClk= {this.onFavClk}/>
+          favmovies= {this.props.favMovies}/>
       </div>
     );
   }
