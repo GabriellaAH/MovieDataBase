@@ -1,0 +1,9 @@
+.errorMsg{
+  color: #f00;
+  padding-left: 15px;
+}
+
+.resultCnt{
+  padding-left: 15px;
+  font-weight: bold;
+}

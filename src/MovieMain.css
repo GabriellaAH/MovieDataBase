@@ -1,0 +1,9 @@
+.MovieMain {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.MovieMain button {
+  margin-left: 5px;
+  margin-right: 5px;
+}
