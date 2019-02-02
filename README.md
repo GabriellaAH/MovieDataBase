@@ -1,6 +1,14 @@
+# Webpack
+
+## Round 3
+
+### Changes
+  - Add Webpack package and configuration
+  - Add babel configuration
+
 # Router version
 
-## round 2
+## Round 2
 
 ### Changes:
   - Add react-router-dom
