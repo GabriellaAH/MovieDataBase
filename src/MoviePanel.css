@@ -1,0 +1,33 @@
+.movieImgAndText{
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.movieDetailContainer{
+  margin-top: 15px;
+  padding: 5px;
+  transition: display 2s;
+  border: 1px solid #ddd;
+}
+
+.imgbox{
+  width: 210px;
+  margin: auto;
+}
+
+.textBox{
+  max-width: 750px;
+  min-width: 210px;
+  text-align: justify;
+  margin: auto;
+}
+
+.btn-mrgn{
+  margin-top: 10px;
+}

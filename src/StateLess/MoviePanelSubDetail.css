@@ -1,0 +1,16 @@
+.subContent{
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 10px;
+  width: 100%
+}
+
+.subDetails{
+     display: flex;
+     flex-flow: row wrap;
+}
+
+.subDetailList{
+  min-width: 14.3em;
+  margin-right: 0.5em;
+}
