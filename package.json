@@ -15,8 +15,8 @@
     "react-test-render": "^1.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development --open",
+    "build": "webpack-dev-server --config ./webpack.config.js --mode production",
     "test": "react-scripts test",
     "test-c": "react-scripts test --coverage",
     "eject": "react-scripts eject"
@@ -27,9 +27,13 @@
   "devDependencies": {
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
+    "html-loader": "^0.5.5",
     "jest-snapshot": "^23.6.0",
     "react-addons-test-utils": "^15.6.2",
-    "react-test-renderer": "^16.7.0"
+    "react-test-renderer": "^16.7.0",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
   },
   "browserslist": [
     ">0.2%",
